@@ -6,10 +6,6 @@ const App: Component = () => {
   const [showModal, setShowModal] = createSignal(false);
   const [sidePanel, setSidePanel] = createSignal(false);
 
-  createEffect(() => {
-    Split(["#split-0", "#split-1", "#split-2"]);
-  });
-
   const AppIcon = (
     <svg
       width="16"
@@ -347,7 +343,7 @@ const App: Component = () => {
   };
 
   return (
-    <div class="split min-w-[100vw] min-h-[100vh] h-full w-full flex overflow-hidden ">
+    <div class="min-w-[100vw] min-h-[100vh] h-full w-full flex overflow-hidden ">
       <div class="bg-gray-100 h-screen w-16 min-w-[64px] px-[10px] py-2 flex flex-col items-center gap-2">
         <div class="bg-gray-200 h-11 w-full rounded-xl"></div>
         <button
