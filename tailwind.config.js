@@ -10,7 +10,6 @@ module.exports = {
       transitionProperty: {
         height: "height",
         spacing: "margin, padding",
-        borderRadius: "rounded",
       },
     },
   },
