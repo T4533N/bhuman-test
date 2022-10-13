@@ -4,8 +4,9 @@
 
 @layer utilities {
   .no-scrollbar::-webkit-scrollbar {
-    width: 0px;
+    width: 2px;
     height: 0px;
+    background: #f7f4ed;
   }
 
   .scrollbar::-webkit-scrollbar {

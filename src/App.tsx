@@ -380,10 +380,10 @@ const App: Component = () => {
       </div>
       <div
         id="split-0"
-        class="border-l border-r border-gray-300 relative min-w-[368px]"
+        class="border-l border-r border-gray-300 relative min-w-[368px] h-screen hover:scrollbar no-scrollbar !overflow-x-hidden"
       >
-        <div class="h-12 border-b border-gray-300 grid place-items-center">
-          <div class="bg-gray-100 grid place-items-center py-3 border-b border-l border-r border-gray-200 sticky w-full top-0 h-[48px]">
+        <div class="h-12 border-b border-gray-300 grid place-items-center sticky top-0">
+          <div class="bg-gray-100 grid place-items-center py-3 border-b border-l border-r border-gray-200 w-full h-[48px]">
             <div class="flex items-center justify-between gap-2 w-full h-full px-2 py-[2px]">
               <div class="p-1">{SearchIcon}</div>
               <input
@@ -402,7 +402,7 @@ const App: Component = () => {
             </div>
           </div>
         </div>
-        <div class="flex flex-col gap-[2px] p-2 w-full no-scrollbar hover:scrollbar h-screen !overflow-x-hidden">
+        <div class="flex flex-col gap-[2px] p-2 w-full">
           <For each={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]}>
             {(color, index) => <TransOverview />}
           </For>
