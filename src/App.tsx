@@ -395,7 +395,7 @@ const App: Component = () => {
             </div>
           </div>
         </div>
-        <div class="flex flex-col gap-[4px] p-2 w-full">
+        <div class="flex flex-col gap-[2px] p-2 w-full">
           <For each={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]}>
             {(item, index) => <TransOverview />}
           </For>
