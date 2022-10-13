@@ -1,10 +1,19 @@
 import { Component, createEffect, createSignal, For } from "solid-js";
 import RobotImage from "./assets/robot-image.svg";
-import Split from "./lib/split";
+import Split from "split.js";
 
 const App: Component = () => {
   const [showModal, setShowModal] = createSignal(false);
   const [sidePanel, setSidePanel] = createSignal(false);
+
+  createEffect(() => {
+    Split(["#split-0", "#split-1"], {
+      sizes: [100, 500],
+      gutterSize: 50,
+      expandToMin: true,
+    });
+    console.log(window.document.body.clientWidth);
+  });
 
   const AppIcon = (
     <svg
@@ -343,7 +352,7 @@ const App: Component = () => {
   };
 
   return (
-    <div class="min-w-[100vw] min-h-[100vh] h-full w-full flex overflow-hidden ">
+    <div class="min-w-[100vw] min-h-[100vh] h-full w-full flex overflow-hidden relative">
       <div class="bg-gray-100 h-screen w-16 min-w-[64px] px-[10px] py-2 flex flex-col items-center gap-2">
         <div class="bg-gray-200 h-11 w-full rounded-xl"></div>
         <button
@@ -369,14 +378,12 @@ const App: Component = () => {
           notification={2}
         />
       </div>
-      <div class="h-screen transactions !overflow-x-hidden border-l border-r border-gray-300 relative min-w-[368px] no-scrollbar hover:scrollbar">
+      <div
+        id="split-0"
+        class="h-screen !overflow-x-hidden border-l border-r border-gray-300 relative min-w-[368px] no-scrollbar hover:scrollbar"
+      >
         <div class="h-12 border-b border-gray-300 grid place-items-center">
-          <div
-            class="bg-gray-100 grid place-items-center py-3 border-b border-l border-r border-gray-200 fixed top-0 h-[48px]"
-            style={{
-              width: "368px",
-            }}
-          >
+          <div class="bg-gray-100 grid place-items-center py-3 border-b border-l border-r border-gray-200 sticky w-full top-0 h-[48px]">
             <div class="flex items-center justify-between gap-2 w-full h-full px-2 py-[2px]">
               <div class="p-1">{SearchIcon}</div>
               <input
@@ -397,16 +404,11 @@ const App: Component = () => {
         </div>
         <div class="flex flex-col gap-[2px] p-2 w-full">
           <For each={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]}>
-            {(item, index) => <TransOverview />}
+            {(color, index) => <TransOverview />}
           </For>
         </div>
-        <div
-          class="bottom-0 w-full h-12 fixed bg-gray-100 grid place-items-center border-t border-gray-300 border-r"
-          style={{
-            width: "368px",
-          }}
-        >
-          <div class="flex items-center justify-between w-full px-2 py-3">
+        <div class="bottom-0 w-full h-12 sticky bg-gray-100 grid place-items-center border-t border-gray-300 border-r">
+          <div class="flex items-center justify-between px-2 py-3 w-full">
             <div class="flex gap-[2px]">
               <select class="bg-white border border-gray-300 rounded-[4px] text-[13px] font-normal leading-6 text-gray-500 appearance-none select-custom px-5">
                 <option>25</option>
@@ -470,7 +472,7 @@ const App: Component = () => {
           </div>
         </div>
       </div>
-      <div class="w-full h-full">
+      <div id="split-1" class="w-full h-full">
         <div class="flex flex-col w-full h-screen justify-end p-3 overflow-y-auto">
           <div class="flex gap-4 w-[680px]">
             <div class="w-24 h-24 min-w-[96px] min-h-[96px] rounded-full grid place-items-center bg-[#60B495]">
@@ -544,8 +546,8 @@ const App: Component = () => {
       {/* sidepanel */}
       <div
         class={`${
-          sidePanel() ? "w-[50%]" : "w-0"
-        } transition-all duration-200 ease-in-out h-screen border-l rounded-tl-xl rounded-bl-xl border-gray-300`}
+          sidePanel() ? "w-[25%]" : "w-0"
+        } absolute right-0 bg-white z-50 transition-all duration-200 ease-in-out h-screen border-l rounded-tl-xl rounded-bl-xl border-gray-300`}
       />
 
       {/* modal */}
