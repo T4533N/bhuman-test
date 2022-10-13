@@ -380,7 +380,7 @@ const App: Component = () => {
       </div>
       <div
         id="split-0"
-        class="h-screen !overflow-x-hidden border-l border-r border-gray-300 relative min-w-[368px] no-scrollbar hover:scrollbar"
+        class="border-l border-r border-gray-300 relative min-w-[368px]"
       >
         <div class="h-12 border-b border-gray-300 grid place-items-center">
           <div class="bg-gray-100 grid place-items-center py-3 border-b border-l border-r border-gray-200 sticky w-full top-0 h-[48px]">
@@ -402,7 +402,7 @@ const App: Component = () => {
             </div>
           </div>
         </div>
-        <div class="flex flex-col gap-[2px] p-2 w-full">
+        <div class="flex flex-col gap-[2px] p-2 w-full no-scrollbar hover:scrollbar h-screen !overflow-x-hidden">
           <For each={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]}>
             {(color, index) => <TransOverview />}
           </For>
