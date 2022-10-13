@@ -1,4 +1,5 @@
 import { Component, createEffect, createSignal } from "solid-js";
+import RobotImage from "./assets/robot-image.svg";
 
 const App: Component = () => {
   const [showModal, setShowModal] = createSignal(false);
@@ -509,7 +510,7 @@ const App: Component = () => {
                       height="72px"
                       class="rounded-xl"
                       alt=""
-                      src="/src/assets/robot-image.svg"
+                      src={RobotImage}
                     />
                     <div class="w-[281px] flex flex-col gap-2 h-fit">
                       <div class="text-[13px] font-normal leading-5 text-gray-500">
