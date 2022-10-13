@@ -4,7 +4,7 @@ import {
   RightArrowIcon,
   SearchIcon,
   ThreeDotMenuIcon,
-} from "../common/Icons";
+} from "../Common/Icons";
 
 function TotalPagesContainer() {
   return (

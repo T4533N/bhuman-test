@@ -1,4 +1,4 @@
-import { DotCircle, EventIcon, ThreeDotMenuIcon } from "../common/Icons";
+import { DotCircle, EventIcon, ThreeDotMenuIcon } from "../Common/Icons";
 
 const MIDContainer = () => {
   return (

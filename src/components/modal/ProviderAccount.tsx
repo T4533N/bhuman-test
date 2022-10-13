@@ -1,4 +1,4 @@
-import { ProviderAccountIcon } from "../common/Icons";
+import { ProviderAccountIcon } from "../Common/Icons";
 
 const ProviderAccount = ({ name }) => {
   return (

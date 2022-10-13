@@ -1,5 +1,5 @@
-import UserInfo from "../transaction/UserInfo";
-import UserPostWrapper from "../transaction/UserPostWrapper";
+import UserInfo from "../Transaction/UserInfo";
+import UserPostWrapper from "../Transaction/UserPostWrapper";
 
 function UserPostContainer() {
   return (

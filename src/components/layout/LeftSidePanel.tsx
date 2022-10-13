@@ -1,5 +1,5 @@
-import TransList from "../transaction/TransList";
-import SearchContainer from "../appbar/SearchContainer";
+import TransList from "../Transaction/TransList";
+import SearchContainer from "../AppBar/SearchContainer";
 import TotalPagesContainer from "./TotalPagesContainer";
 
 function LeftSidePanel() {

@@ -1,4 +1,4 @@
-import { DotCircle, VisaSymbol } from "../common/Icons";
+import { DotCircle, VisaSymbol } from "../Common/Icons";
 import panelState from "../../state/SidePanelState";
 
 const UserPost = ({ body, orderUrl, transNameAction, transTitle }: any) => {

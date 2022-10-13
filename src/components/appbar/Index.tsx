@@ -1,4 +1,4 @@
-import { AppIcon } from "../common/Icons";
+import { AppIcon } from "../Common/Icons";
 import Avatar from "./Avatar";
 import modalState from "../../state/ModalState";
 

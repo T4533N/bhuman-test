@@ -1,4 +1,4 @@
-import { FilterIcon, SearchIcon, ThreeDotMenuIcon } from "../common/Icons";
+import { FilterIcon, SearchIcon, ThreeDotMenuIcon } from "../Common/Icons";
 
 function SearchContainer() {
   return (
