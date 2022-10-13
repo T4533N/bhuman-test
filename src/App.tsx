@@ -8,7 +8,7 @@ const App: Component = () => {
 
   createEffect(() => {
     Split(["#split-0", "#split-1"], {
-      sizes: [100, 500],
+      sizes: [50, 500],
       gutterSize: 50,
       expandToMin: true,
     });
@@ -416,7 +416,7 @@ const App: Component = () => {
                 <option>100</option>
                 <option>150</option>
               </select>
-              <div class="text-[13px] font-normal  leading-6 text-gray-500">
+              <div class="text-[13px] font-normal  leading-6 text-gray-900">
                 of 299
               </div>
             </div>
@@ -447,7 +447,7 @@ const App: Component = () => {
                     type="text"
                   />
                 </div>
-                <div class="text-[13px] leading-4 font-normal text-gray-500">
+                <div class="text-[13px] leading-4 font-normal text-gray-900">
                   of 299
                 </div>
               </div>
@@ -546,14 +546,14 @@ const App: Component = () => {
       {/* sidepanel */}
       <div
         class={`${
-          sidePanel() ? "w-[25%]" : "w-0"
-        } absolute right-0 bg-white z-50 transition-all duration-200 ease-in-out h-screen border-l rounded-tl-xl rounded-bl-xl border-gray-300`}
+          sidePanel() ? "w-[130%]" : "w-0"
+        } bg-white z-50 transition-all duration-200 ease-in-out h-screen border-l rounded-tl-xl rounded-bl-xl border-gray-300`}
       />
 
       {/* modal */}
 
       <div
-        class={`fixed inset-0 z-10 w-screen h-screen grid place-items-center transition-all duration-300 opacity-0 ${
+        class={`fixed inset-0 z-50 w-screen h-screen grid place-items-center transition-all duration-300 opacity-0 ${
           showModal() ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
         aria-labelledby="modal-title"
