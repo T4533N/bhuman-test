@@ -509,7 +509,7 @@ const App: Component = () => {
                       height="72px"
                       class="rounded-xl"
                       alt=""
-                      src="/assets/robot-image.svg"
+                      src="/src/assets/robot-image.svg"
                     />
                     <div class="w-[281px] flex flex-col gap-2 h-fit">
                       <div class="text-[13px] font-normal leading-5 text-gray-500">
